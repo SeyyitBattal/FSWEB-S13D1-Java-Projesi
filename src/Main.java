@@ -8,7 +8,7 @@ public class Main {
         System.out.println(isCatPlaying(true,10)); // False
         System.out.println(isCatPlaying(false,36)); // False
         System.out.println(isCatPlaying(false,35)); // True
-
+//
         Scanner inputValues = new Scanner(System.in);
         double num1 = 0;
         double num2 = 0;
@@ -17,26 +17,20 @@ public class Main {
         System.out.println("Enter your second number: ");
         num2 = inputValues.nextDouble();
         System.out.println(area(num1,num2));
+        //
+        Scanner radiusValue = new Scanner(System.in);
+        double radius=0;
+        System.out.println("Enter your radius value: ");
+        radius = radiusValue.nextDouble();
+        System.out.println(area(radius));
 
     }
 
-    /**
-     *     System.out.println(shouldWakeUp(false, -4));
-     *
-     *        public static boolean shouldWakeUp(boolean bark, int clock) {
-     *         // EKSİK
-     *        if( clock > -1 && clock < 24){
-     *            System.out.println("Saat degeri dogru");
-     *        }
-     *       }else{
-     *           System.out.println("Saat degeri dogru degil");
-     *       }
-     *       return bark;
-     *    }
-     * @param
-     * @param
-     * @return
-     */
+
+
+
+
+
 
     public static boolean hasTeen(int age1, int age2, int age3){
         // TAMAM
@@ -60,26 +54,28 @@ playing = true;
     return playing;
 }
 
-
-
-
 public static double area (double num1, double num2){
-
+        //TAMAM
        double answer = num1 * num2;
-
 if(answer < 0){
     System.out.println("Your numbers are wrong");
     answer = -1;
 }
 return answer;
-
-
-
 }
 
 
+public static double area(double radius){
+        // TAMAM
+double answer2=0;
 
-
-
+if(radius <0){
+    System.out.println("Radius value should be bigger than 0");
+    answer2 = -1;
+}else{
+    answer2 = radius*radius*Math.PI;
+}
+return answer2;
+}
 
 }

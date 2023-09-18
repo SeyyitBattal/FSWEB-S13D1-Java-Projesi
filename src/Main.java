@@ -2,13 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(shouldWakeUp(true,1)); // true
+        System.out.println(shouldWakeUp(false,2)); // false
+        System.out.println(shouldWakeUp(true,-1)); // false
+        //
         System.out.println(hasTeen(9,99,19)); //True
         System.out.println(hasTeen(23,15,42)); //True
         System.out.println(hasTeen(22,23,34)); //False
+        //
         System.out.println(isCatPlaying(true,10)); // False
         System.out.println(isCatPlaying(false,36)); // False
         System.out.println(isCatPlaying(false,35)); // True
-//
+        //
         Scanner inputValues = new Scanner(System.in);
         double num1 = 0;
         double num2 = 0;
@@ -27,10 +32,23 @@ public class Main {
     }
 
 
+    public static boolean shouldWakeUp (boolean bark, int clock){
+boolean cvp = false;
 
+if(clock > 0 && clock < 24){
+    if ((clock < 8 || clock > 20) && bark){
+cvp= true;
+    }
+    else {
+        cvp = false;
+    }
 
+} else {
+    cvp = false;
+}
 
-
+return cvp;
+    }
 
     public static boolean hasTeen(int age1, int age2, int age3){
         // TAMAM

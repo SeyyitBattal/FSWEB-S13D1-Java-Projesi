@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(hasTeen(9,99,19)); //True
@@ -6,6 +8,16 @@ public class Main {
         System.out.println(isCatPlaying(true,10)); // False
         System.out.println(isCatPlaying(false,36)); // False
         System.out.println(isCatPlaying(false,35)); // True
+
+        Scanner inputValues = new Scanner(System.in);
+        double num1 = 0;
+        double num2 = 0;
+        System.out.println("Enter your first number: ");
+        num1 = inputValues.nextDouble();
+        System.out.println("Enter your second number: ");
+        num2 = inputValues.nextDouble();
+        System.out.println(area(num1,num2));
+
     }
 
     /**
@@ -45,9 +57,26 @@ playing = true;
 }else{
     playing = false;
 }
-
     return playing;
 }
+
+
+
+
+public static double area (double num1, double num2){
+
+       double answer = num1 * num2;
+
+if(answer < 0){
+    System.out.println("Your numbers are wrong");
+    answer = -1;
+}
+return answer;
+
+
+
+}
+
 
 
 
